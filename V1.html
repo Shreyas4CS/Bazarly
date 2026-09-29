@@ -24,9 +24,9 @@
   --fd:'Poppins',system-ui,sans-serif;--fb:'Nunito',system-ui,sans-serif;--fh:'Caveat',cursive;--fm:'JetBrains Mono',monospace;
   --sh:0 1px 0 rgba(30,27,58,.04),0 16px 36px -24px rgba(30,27,58,.35);--sh-lg:0 30px 70px -30px rgba(30,27,58,.45);--navH:70px;
   --card-min:260px;      /* ← product card width. Bigger number = bigger cards */
-  --img-ratio:4/5;       /* ← image box shape: 4/5 portrait (default), 1/1 square, 4/3 landscape */
-  --img-fit:cover;       /* ← cover = photo fills the whole box (edges may be trimmed) · contain = whole photo always visible */
-  --img-pad:0;           /* ← space around photos (try 7% with contain) */
+  --img-ratio:1/1;       /* ← image box shape: 1/1 square, 4/5 portrait, 4/3 landscape */
+  --img-fit:contain;     /* ← contain = whole photo always visible · cover = fills the box (may crop edges) */
+  --img-pad:7%;          /* ← breathing space around photos (use 0 with cover) */
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -279,7 +279,7 @@ footer.site .fwave svg{width:200%;height:60px;animation:waveX 16s linear infinit
 .pimg.has-img img{opacity:1}
 .pimg.has-img .pem{display:none}
 .pcard:hover .pimg.has-img img{transform:scale(1.06)}
-.pimg.sm{aspect-ratio:auto}
+.pimg.sm img{padding:6%}
 .pimg.sm{width:92px;height:92px;border-radius:18px;aspect-ratio:auto;flex-shrink:0}.pimg.sm .pem{font-size:48px}
 .pimg.lg{border-radius:24px}.pimg.lg .pem{font-size:130px}
 .off{position:absolute;top:12px;left:12px;background:var(--pink);color:#fff;font-weight:800;font-size:12px;padding:4px 10px;border-radius:999px;z-index:2}
